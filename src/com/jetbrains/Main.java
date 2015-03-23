@@ -16,29 +16,24 @@ public class Main {
         Elevator[] myElevator = new Elevator[3];
 
         //Define each Object per Elevator
-        myElevator[0] = new Elevator();
-        myElevator[1] = new Elevator();
-        myElevator[2] = new Elevator();
-
-        //Name Elevator Objects
-        myElevator[0].name = "Elevator A";
-        myElevator[1].name = "Elevator B";
-        myElevator[2].name = "Elevator C";
+        Elevator elevatorA = new Elevator();
+        Elevator elevatorB = new Elevator();
+        Elevator elevatorC = new Elevator();
 
         //Assign Elevator Objects a floor #
-        myElevator[0].floor = (int) (Math.random() * 10);
-        myElevator[1].floor = (int) (Math.random() * 10);
-        myElevator[2].floor = (int) (Math.random() * 10);
+        elevatorA.floor = (int) (Math.random() * 10);
+        elevatorB.floor = (int) (Math.random() * 10);
+        elevatorC.floor = (int) (Math.random() * 10);
 
         //Assign Elevator Objects a 0 or 1 (direction toward me 1 not 0)
-        myElevator[0].direction = (int) (Math.random() * 2);
-        myElevator[1].direction = (int) (Math.random() * 2);
-        myElevator[2].direction = (int) (Math.random() * 2);
+        elevatorA.direction = (int) (Math.random() * 2);
+        elevatorB.direction = (int) (Math.random() * 2);
+        elevatorC.direction = (int) (Math.random() * 2);
 
         //Assign Elevator Objects a 0 or 1 (moving 1 not moving 0)
-        myElevator[0].moving = (int) (Math.random() * 2);
-        myElevator[1].moving = (int) (Math.random() * 2);
-        myElevator[2].moving = (int) (Math.random() * 2);
+        elevatorA.moving = (int) (Math.random() * 2);
+        elevatorB.moving = (int) (Math.random() * 2);
+        elevatorC.moving = (int) (Math.random() * 2);
 
         //The floor I'm currently on
         int myFloor = (int) (Math.random() * 10);
@@ -46,10 +41,10 @@ public class Main {
         //print out the values
         System.out.println("You are currently on Floor " + myFloor);
 
-        System.out.println("Elevator A is currently on floor " + myElevator[0].floor);
+        System.out.println("Elevator A is currently on floor " + elevatorA.floor);
 
         //convert Elevator A direction variable to words
-        if (myElevator[0].direction == 0) {
+        if (elevatorA.direction == 0) {
             System.out.println("Elevator A is moving towards your floor.");
         }
         else {
@@ -57,17 +52,17 @@ public class Main {
         }
 
         //convert Elevator A moving variable to words
-        if (myElevator[0].moving == 0) {
+        if (elevatorA.moving == 0) {
             System.out.println("Elevator A is active.");
         }
         else {
             System.out.println("Elevator A is inactive.");
         }
 
-        System.out.println("Elevator B is currently on floor " + myElevator[1].floor);
+        System.out.println("Elevator B is currently on floor " + elevatorB.floor);
 
         //convert Elevator A direction variable to words
-        if (myElevator[1].direction == 0) {
+        if (elevatorB.direction == 0) {
             System.out.println("Elevator B is moving towards your floor.");
         }
         else {
@@ -75,7 +70,7 @@ public class Main {
         }
 
         //convert Elevator A moving variable to words
-        if (myElevator[1].moving == 0) {
+        if (elevatorB.moving == 0) {
             System.out.println("Elevator B is active.");
         }
         else {
@@ -83,7 +78,7 @@ public class Main {
         }
 
         //convert Elevator A direction variable to words
-        if (myElevator[2].direction == 0) {
+        if (elevatorC.direction == 0) {
             System.out.println("Elevator C is moving towards your floor.");
         }
         else {
@@ -91,14 +86,14 @@ public class Main {
         }
 
         //convert Elevator A moving variable to words
-        if (myElevator[2].moving == 0) {
+        if (elevatorC.moving == 0) {
             System.out.println("Elevator C is active.");
         }
         else {
             System.out.println("Elevator C is inactive.");
         }
 
-        System.out.println("Elevator C is currently on floor " + myElevator[2].floor);
+        System.out.println("Elevator C is currently on floor " + elevatorC.floor);
 
         //Enter your floor number
         String mySelection;
